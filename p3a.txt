@@ -1,0 +1,7 @@
+only one file will be used for a parallel sort for two files: an input and an output file
+parallelization is the name of the same, so work on correctness first
+
+bottleneck might be the mutex lock on the reading of pages, since we dont want duplicate
+reads to the same line, but parallel sort might be ok to work with in a data structure,
+since if editing pointers is what is needed, the data shouldn't be corrupted if we have
+multiple move (maybe not).
